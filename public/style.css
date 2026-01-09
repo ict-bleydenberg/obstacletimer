@@ -1,0 +1,5 @@
+body { font-family:sans-serif; background:#f0f0f0; color:#000; text-align:center; }
+h1 { margin:10px; }
+.last6, .top5, .lastStopped { display:flex; justify-content:center; margin:10px; }
+.timerBox { padding:10px; margin:5px; border-radius:10px; color:#000; font-weight:bold; min-width:70px; }
+button { font-size:1.5em; padding:15px; margin:5px; border:none; border-radius:10px; cursor:pointer; }

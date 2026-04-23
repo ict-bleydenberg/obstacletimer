@@ -14,7 +14,7 @@ let last10 = [];
 let top10 = [];
 
 io.on("connection", socket => {
-  socket.emit("sync", { timers, last10, top10, counter });
+  socket.emit("sync", { timers, last10, top10, counter, serverTime: Date.now() });
 
   socket.on("start", key => {
     if (!timers[key]) {
@@ -23,7 +23,7 @@ io.on("connection", socket => {
         number: counter++
       };
     }
-    io.emit("sync", { timers, last10, top10, counter });
+    io.emit("sync", { timers, last10, top10, counter, serverTime: Date.now() });
   });
 
   socket.on("stop", key => {

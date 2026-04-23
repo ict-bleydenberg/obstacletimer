@@ -6,13 +6,25 @@ body {
 }
 
 /* TITELS */
-h1, h2 {
+h1 {
   text-align: center;
-  font-family: 'Comic Sans MS', 'Segoe UI', cursive;
+  font-family: 'Oswald', sans-serif;
+  font-size: 4rem;
+  margin: 20px auto;
+  display: block;
+  width: fit-content;
+  background: rgba(255,255,255,0.9);
+  padding: 10px 30px;
+  border-radius: 25px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+h2 {
+  text-align: center;
+  font-family: 'Oswald', sans-serif;
   background: rgba(255,255,255,0.85);
-  padding: 10px 20px;
+  padding: 8px 20px;
   border-radius: 20px;
-  display: inline-block;
 }
 
 /* layout */
@@ -46,14 +58,14 @@ h1, h2 {
 }
 
 .timerCircle {
-  width: 100px;
-  height: 100px;
+  width: 130px;
+  height: 130px;
   border-radius: 50%;
   margin: auto;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 2.2rem;
+  font-size: 2.5rem;
   font-weight: bold;
   color: white;
 }
@@ -90,16 +102,16 @@ h1, h2 {
 }
 
 /* kleuren */
-.a { border-color:#d9981e }
+.a { border-color:#eda622 }
 .z { border-color:#c80303 }
-.e { border-color:#a70ce4 }
+.e { border-color:#9b50b9 }
 .r { border-color:#000000 }
-.t { border-color:#e071a3 }
+.t { border-color:#f694c0 }
 .y { border-color:#a2dd0d }
-.u { border-color:#3b1309 }
-.i { border-color:#4f4b4b }
-.o { border-color:#2cabcb }
-.p { border-color:#2c064a }
+.u { border-color:#571c0e }
+.i { border-color:#737070 }
+.o { border-color:#3cb7d6 }
+.p { border-color:#351368 }
 
 /* reset knop */
 #reset {

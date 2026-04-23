@@ -41,7 +41,7 @@ return `
   <div class="timerCircle" style="background:${t ? color : 'transparent'}">
     ${t ? t.number : ""}
   </div>
-  <div>${t ? fmt(Date.now()-t.start) : "--:--:-"}</div>
+  <div>${t ? fmt(Math.max(0, Date.now() - t.start)) : "--:--:-"}</div>
 </div>
 `;
 }).join("");

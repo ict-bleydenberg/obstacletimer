@@ -1,206 +1,89 @@
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
 body {
-    font-family: 'Segoe UI', 'Comic Sans MS', sans-serif;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    min-height: 100vh;
-    color: #333;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f4f6f8;
 }
 
-.container {
-    display: flex;
-    min-height: 100vh;
-    padding: 20px;
-    gap: 20px;
+/* TITEL */
+h1 {
+  text-align: center;
+  font-size: 3rem;
+  margin: 10px;
 }
 
-/* Sidebars */
-.sidebar-left, .sidebar-right {
-    width: 25%;
-    background: rgba(255, 255, 255, 0.95);
-    border-radius: 20px;
-    padding: 20px;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+/* 3 kolommen */
+#layout {
+  display: grid;
+  grid-template-columns: 25% 50% 25%;
+  gap: 10px;
+  padding: 10px;
 }
 
-.sidebar-left h2, .sidebar-right h2 {
-    text-align: center;
-    color: #4a4a4a;
-    margin-bottom: 15px;
-    font-size: 1.3em;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+/* LIJSTEN */
+.panel {
+  background: white;
+  border-radius: 15px;
+  padding: 15px;
 }
 
-/* Main Area */
-.main-area {
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    padding-top: 10px;
+.panel h2 {
+  margin-top: 0;
 }
 
-.main-title {
-    font-size: 4em;
-    color: white;
-    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
-    margin-bottom: 20px;
-    letter-spacing: 10px;
-    animation: pulse 2s ease-in-out infinite;
+/* KNOPPEN */
+#timers {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
 }
 
-@keyframes pulse {
-    0%, 100% { transform: scale(1); }
-    50% { transform: scale(1.05); }
+.timerBox {
+  border-radius: 20px;
+  padding: 20px;
+  text-align: center;
+  border: 4px solid;
+  font-size: 1.5rem;
 }
 
-/* Timers Grid */
-.timers-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
-    width: 100%;
-    padding: 10px;
+.timerCircle {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin: auto;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
 }
 
-.timer-card {
-    border-radius: 20px;
-    padding: 15px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    border: 4px solid;
+/* VRIJ */
+.free {
+  background: #d3f9d8;
 }
 
-.timer-card.idle {
-    background: #d4edda;
-    border-color: #28a745;
+/* ACTIEF */
+.active {
+  background: white;
 }
 
-.timer-card.running {
-    background: white;
-    border-color: var(--timer-color);
-}
+/* KLEUREN */
+.a { border-color:#ff6b6b }
+.z { border-color:#4dabf7 }
+.e { border-color:#69db7c }
+.r { border-color:#ffd43b }
+.t { border-color:#b197fc }
+.y { border-color:#ffa94d }
+.u { border-color:#63e6be }
+.i { border-color:#74c0fc }
+.o { border-color:#f06595 }
+.p { border-color:#c0eb75 }
 
-.timer-card .key-hint {
-    position: absolute;
-    top: 5px;
-    left: 10px;
-    font-size: 0.9em;
-    color: rgba(0,0,0,0.4);
-    font-weight: bold;
-}
-
-.timer-card {
-    position: relative;
-}
-
-.timer-btn {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    border: none;
-    font-size: 2.5em;
-    cursor: pointer;
-    transition: all 0.2s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-}
-
-.timer-btn:hover {
-    transform: scale(1.1);
-}
-
-.timer-btn:active {
-    transform: scale(0.95);
-}
-
-.timer-time {
-    font-size: 1.5em;
-    font-weight: bold;
-    color: #333;
-    font-family: 'Courier New', monospace;
-}
-
-.timer-label {
-    font-size: 0.9em;
-    color: #666;
-    margin-top: 5px;
-}
-
-/* Times List */
-.times-list {
-    max-height: calc(100vh - 120px);
-    overflow-y: auto;
-}
-
-.time-item {
-    display: flex;
-    align-items: center;
-    padding: 10px;
-    margin-bottom: 8px;
-    border-radius: 12px;
-    background: #f8f9fa;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-.time-item .rank {
-    font-weight: bold;
-    font-size: 1.1em;
-    margin-right: 10px;
-    min-width: 30px;
-}
-
-.time-item .emoji {
-    font-size: 1.5em;
-    margin-right: 8px;
-}
-
-.time-item .key-badge {
-    background: var(--timer-color);
-    color: white;
-    padding: 3px 8px;
-    border-radius: 8px;
-    font-size: 0.85em;
-    font-weight: bold;
-    margin-right: 8px;
-}
-
-.time-item .time-value {
-    font-family: 'Courier New', monospace;
-    font-weight: bold;
-    color: #333;
-    margin-left: auto;
-}
-
-/* Scrollbar styling */
-.times-list::-webkit-scrollbar {
-    width: 8px;
-}
-
-.times-list::-webkit-scrollbar-track {
-    background: #f1f1f1;
-    border-radius: 10px;
-}
-
-.times-list::-webkit-scrollbar-thumb {
-    background: #888;
-    border-radius: 10px;
-}
-
-/* Responsive */
-@media (max-width: 1200px) {
-    .timers-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
+/* RESET knop (verborgen) */
+#reset {
+  position: fixed;
+  bottom: 5px;
+  right: 5px;
+  opacity: 0.2;
+  font-size: 10px;
 }

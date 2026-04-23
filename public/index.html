@@ -1,24 +1,33 @@
 <!DOCTYPE html>
-<html lang="nl">
+<html>
 <head>
 <meta charset="UTF-8">
-<title>Obstacle Timer - Start</title>
+<title>START</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<h1>Obstacle Timer - Start</h1>
-<div class="last6" id="last6"></div>
-<div class="top5" id="top5"></div>
-<div class="timers" id="timers">
-    <button data-key="r">R 🍌</button>
-    <button data-key="t">T 👟</button>
-    <button data-key="u">U 🪣</button>
-    <button data-key="y">Y 🚲</button>
-    <button data-key="i">I 🏁</button>
-    <button data-key="o">O 🍎</button>
+
+<h1>START</h1>
+
+<div id="layout">
+
+<div class="panel">
+<h2>10 nieuwste tijden</h2>
+<ul id="last"></ul>
 </div>
+
+<div id="timers"></div>
+
+<div class="panel">
+<h2>TOP 10</h2>
+<ol id="top"></ol>
+</div>
+
+</div>
+
 <script src="/socket.io/socket.io.js"></script>
-<script src="client.js"></script>
-<script>init(false)</script>
+<script src="app.js"></script>
+<script>startApp(false)</script>
+
 </body>
 </html>

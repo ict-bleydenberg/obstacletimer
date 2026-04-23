@@ -1,89 +1,110 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Segoe UI', sans-serif;
   margin: 0;
-  background: #f4f6f8;
+  background: url('bg.png') no-repeat center center fixed;
+  background-size: cover;
 }
 
-/* TITEL */
-h1 {
+/* TITELS */
+h1, h2 {
   text-align: center;
-  font-size: 3rem;
-  margin: 10px;
+  font-family: 'Comic Sans MS', 'Segoe UI', cursive;
+  background: rgba(255,255,255,0.85);
+  padding: 10px 20px;
+  border-radius: 20px;
+  display: inline-block;
 }
 
-/* 3 kolommen */
+/* layout */
 #layout {
   display: grid;
   grid-template-columns: 25% 50% 25%;
-  gap: 10px;
-  padding: 10px;
+  gap: 20px;
+  padding: 20px;
 }
 
-/* LIJSTEN */
+/* panel */
 .panel {
-  background: white;
-  border-radius: 15px;
-  padding: 15px;
+  background: rgba(255,255,255,0.9);
+  border-radius: 30px;
+  padding: 20px;
 }
 
-.panel h2 {
-  margin-top: 0;
-}
-
-/* KNOPPEN */
+/* timers */
 #timers {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 15px;
+  gap: 20px;
 }
 
 .timerBox {
-  border-radius: 20px;
-  padding: 20px;
+  border-radius: 40px;
+  padding: 25px;
   text-align: center;
-  border: 4px solid;
-  font-size: 1.5rem;
+  border: 6px solid;
+  font-size: 2rem;
 }
 
 .timerCircle {
-  width: 80px;
-  height: 80px;
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
   margin: auto;
-  font-size: 2rem;
   display: flex;
   align-items: center;
   justify-content: center;
+  font-size: 2.2rem;
   font-weight: bold;
+  color: white;
 }
 
-/* VRIJ */
+/* vrij / actief */
 .free {
   background: #d3f9d8;
 }
 
-/* ACTIEF */
 .active {
   background: white;
 }
 
-/* KLEUREN */
-.a { border-color:#ff6b6b }
-.z { border-color:#4dabf7 }
-.e { border-color:#69db7c }
-.r { border-color:#ffd43b }
-.t { border-color:#b197fc }
-.y { border-color:#ffa94d }
-.u { border-color:#63e6be }
-.i { border-color:#74c0fc }
-.o { border-color:#f06595 }
-.p { border-color:#c0eb75 }
+/* lijst spacing */
+#last li, #top li {
+  margin: 15px 0;
+  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+}
 
-/* RESET knop (verborgen) */
+/* cirkel in lijst */
+.circleList {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  border: 2px solid white;
+}
+
+/* kleuren */
+.a { border-color:#d9981e }
+.z { border-color:#c80303 }
+.e { border-color:#a70ce4 }
+.r { border-color:#000000 }
+.t { border-color:#e071a3 }
+.y { border-color:#a2dd0d }
+.u { border-color:#3b1309 }
+.i { border-color:#4f4b4b }
+.o { border-color:#2cabcb }
+.p { border-color:#2c064a }
+
+/* reset knop */
 #reset {
   position: fixed;
   bottom: 5px;
   right: 5px;
   opacity: 0.2;
-  font-size: 10px;
 }

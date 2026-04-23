@@ -9,6 +9,7 @@ const lastList = document.getElementById("last");
 const topList = document.getElementById("top");
 
 let currentData = { timers:{} };
+let timeOffset = 0;
 
 /* formatter -> mm:ss:t */
 function fmt(ms){
@@ -41,7 +42,7 @@ return `
   <div class="timerCircle" style="background:${t ? color : 'transparent'}">
     ${t ? t.number : ""}
   </div>
-  <div>${t ? fmt(Math.max(0, Date.now() - t.start)) : "--:--:-"}</div>
+  <div>${t ? fmt(Math.max(0, (Date.now() - timeOffset) - t.start)) : "--:--:-"}</div>
 </div>
 `;
 }).join("");
@@ -54,6 +55,7 @@ setInterval(render, 100);
 /* sync */
 socket.on("sync", data=>{
 currentData = data;
+timeOffset = Date.now() - data.serverTime;
 
 /* laatste 10 */
 lastList.innerHTML = data.last10.map(e=>{

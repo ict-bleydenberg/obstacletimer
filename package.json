@@ -1,11 +1,15 @@
 {
-  "name": "obstacletimer",
+  "name": "obstacle-run-timer",
   "version": "1.0.0",
-  "description": "Realtime obstacle course timer",
+  "description": "Een vrolijke obstacle run timer voor kinderen met 10 timers",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "dev": "node server.js"
   },
+  "keywords": ["timer", "obstacle-run", "kids"],
+  "author": "",
+  "license": "MIT",
   "dependencies": {
     "express": "^4.18.2",
     "socket.io": "^4.7.2"

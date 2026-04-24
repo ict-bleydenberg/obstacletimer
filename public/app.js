@@ -39,9 +39,9 @@ const color = getColor(k);
 
 return `
 <div class="timerBox ${k} ${cls}">
-  <div class="timerCircle" style="background:${t ? color : 'transparent'}">
-    ${t ? t.number : ""}
-  </div>
+<div class="timerCircle" style="background:${color}">
+  ${t ? t.number : ""}
+</div>
   <div>${t ? fmt(Math.max(0, (Date.now() - timeOffset) - t.start)) : "--:--:-"}</div>
 </div>
 `;

@@ -74,6 +74,7 @@ h2 {
   color: white;
 }
 
+
 /* vrij / actief */
 .free {
   background: #d3f9d8;
@@ -124,4 +125,31 @@ h2 {
   bottom: 5px;
   right: 5px;
   opacity: 0.2;
+}
+
+/* TOP 3 highlight */
+#top li:nth-child(1) {
+  background: gold;
+  color: black;
+  font-weight: bold;
+  border-radius: 20px;
+  padding: 8px;
+}
+
+#top li:nth-child(2) {
+  background: silver;
+  color: black;
+  border-radius: 20px;
+  padding: 8px;
+}
+
+#top li:nth-child(3) {
+  background: #cd7f32; /* brons */
+  color: white;
+  border-radius: 20px;
+  padding: 8px;
+}
+
+#top li:nth-child(-n+3) {
+  font-size: 1.6rem;
 }

@@ -58,8 +58,8 @@ h2 {
 }
 
 .timerCircle {
-  width: 130px;
-  height: 130px;
+  width: 65px;
+  height: 65px;
   border-radius: 50%;
   margin: auto;
   display: flex;
